@@ -26,3 +26,22 @@ body {
         background-color: beige;
     }
   }
+  span {
+    color : red;
+  }
+  strong{
+    border-radius: 5px;
+    color : blue;
+  }
+  .special{
+    font-weight: lighter;
+    color: rgb(118, 168, 211);
+  }
+  
+a:link, a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  text-decoration: none;
+}
