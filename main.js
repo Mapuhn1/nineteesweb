@@ -7,6 +7,7 @@ function BusTiming(){
     const choice = select.value;
 
     if (choice == "morning"){
+      
         output.textContent = "The buses passing are as follows : 0600 - 0859 "
     }
     else if (choice == "afternoon"){
@@ -23,3 +24,12 @@ let from = prompt("Where are you traveling from?");
 let to = prompt("Where are you traveling to?");
 let journey = "Finding you a bus from "+ from + " to " + to;
 alert(journey);
+
+
+function updateDivContent(){
+    var div = document.getElementById("myDiv");
+
+    div.textContent = "This should change";
+}
+
+window.onload= updateDivContent;
