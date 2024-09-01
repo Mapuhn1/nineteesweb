@@ -1,0 +1,70 @@
+h1 {
+    color : rgb(16, 7, 66);
+   
+    font :
+    1500/200% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+  text-align: center;
+}
+
+body {
+    background-color: rgb(231, 221, 240);
+    font:
+      1em/150% Helvetica,
+      Arial,
+      sans-serif;
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 33em;
+  }
+  
+  body {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .visual {
+    height: 100px;
+    width: 100%;
+    background: rgb(243, 239, 232);
+    margin: 0.5rem 0;
+  }
+  
+  
+  
+  @media (min-width: 30em) {
+    body {
+        font-family: system-ui, sans-serif;
+        background-color: beige;
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
+  }
+
+  strong{
+    border-radius: 5px;
+    color : rgb(64, 64, 65);
+  }
+  .special{
+    font-weight: lighter;
+    color: rgb(32, 33, 34);
+  }
+  
+a:link, a:visited {
+  color: #310457;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav{
+  text-align: left;
+}
+
