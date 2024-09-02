@@ -14,30 +14,43 @@
    </header>
    <!-- Qustion1 -->
    <div>
-    <h3>Which Planet is known as the Red Planet?</h3>
-    <label><input type = "checkbox" name = "q1" value = "Mars">Mars</label><br>
-    <label><input type = "checkbox" name = "q1" value = "Jupiter">Jupiter</label><br>
-    <label><input type = "checkbox" name = "q1" value = "Uranus">Uranus</label><br>
-    <label><input type = "checkbox" name = "q1" value = "Pluto">Pluto</label><br>
+    <h3>Which of these elements are gases at room temperature</h3>
+    <label><input type = "checkbox" name = "q1" value = "Oxygen">Oxygen</label><br>
+    <label><input type = "checkbox" name = "q1" value = "Helium">Helium</label><br>
+    <label><input type = "checkbox" name = "q1" value = "Mercury">Mercury</label><br>
+    <label><input type = "checkbox" name = "q1" value = "Iron">Iron</label><br>
    </div>
    <!-- Question2 -->
-    <div>
-   <h3>Which of these is a promise ?</h3>
-   <label><input type = "radio" name = "q2" value = "Stars">Stars</label><br>
-   <label><input type = "radio" name = "q2" value = "Moon">Moon</label><br>
-   <label><input type = "radio" name = "q2" value = "Rainbow">Rainbow</label><br>
-   <label><input type = "radio" name = "q2" value = "Rain">Rain</label><br>
-    </div>
+   <div>
+    <h3>Which plant is known as the Red planet?</h3>
+    <label><input type = "radio" name = "q2" value = "Mars">Mars</label><br>
+    <label><input type = "radio" name = "q2" value = "Mercury">Mercury</label><br>
+    <label><input type = "radio" name = "q2" value = "Venus">Venus</label><br>
+    <label><input type = "radio" name = "q2" value = "Pluto">Pluto</label><br>
+     </div>
     <!-- Question3 -->
     <div>
     <h3>What is the best book and movie ever?</h3>
     <input type = "text" name = "q3">
     </div>
     <!-- Drag and drop -->
-    <h3>What color is the moon?</h3>
-    <p draggable="true">Greyish</p>
-    <p draggable="true">Yellowish</p>
+       <h3>Match the countries to their respective continents</h3>
+   
+    <div class="drag-drop-container">
+        <div id="languages" class="draggable-items">
+            <div draggable="true" class="draggable" data-type="Country">South America</div>
+            <div draggable="true" class="draggable" data-type="Country">Europe</div>
+            <div draggable="true" class="draggable" data-type="Country">Asia</div>
+        </div>
+        <div id="types" class="dropzones">
+            <div class="dropzone" data-accept="Country">Germany</div>
+            <div class="dropzone" data-accept="Country">Japan</div>
+            <div class="dropzone" data-accept="Country">Brazil</div>
+        </div>
+        <button id="submitbtn">Submit form</button>
     </form>
+    <!-- To display the results -->
+     <p id = "result"></p>
     <script src = "interactive.js"></script>
     </body>
     </html>
