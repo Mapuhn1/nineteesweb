@@ -27,5 +27,36 @@ document.getElementById('myButton2').addEventListener('click', function() {
     document.body.style.backgroundColor = getRandomColor();
 });
 
+function MathFn(a, b, operator){
+const display = "Which operator would you like to use?"
+console.log(display);
+let result = 0;
+
+switch (operator){
+    case "+" :
+    result = a + b
+    break;
+    case "-":
+        result= a - b;
+        break;
+        case "*":
+            result = a * b;
+            case "/":
+                result = a / b;
+                break;
+                case "%":
+                    result = a % b;
+                    break;
+                    default :
+                    console.log("Invalid operator");
+                    break;
+
+}
+}
+document.getElementById('MathBtn').addEventListener('click', function() {
+    
+    MathFn(10, 5, "+");
+});
+
 
 
