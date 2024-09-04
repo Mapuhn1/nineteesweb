@@ -1,0 +1,18 @@
+.granpa{
+    background-color: rgb(42, 136, 218);
+    height : 100px;
+    width: 	100px;
+}
+
+.granpa .parent{
+    background-color: blueviolet;
+    height : 80px;
+    width: 80px;
+}
+
+.granpa .parent .child{
+    background-color:red;
+    height: 60px;
+    width: 60px;
+
+}
