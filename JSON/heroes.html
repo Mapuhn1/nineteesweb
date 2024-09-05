@@ -27,6 +27,8 @@ async function populate() {
   
     const response = await fetch(request);
     const superHeroes = await response.json();
+    console.log(superHeroes)
+    console.log(superHeroes.members)
   
     populateHeader(superHeroes);
     populateHeroes(superHeroes);
