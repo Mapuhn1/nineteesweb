@@ -1,41 +1,45 @@
-    // method for fetching the api data
-    async function pokeData(){
 
-        const requestUrl = "https://pokeapi.co/api/v2/pokemon/ditto";
-        const response = await fetch (requestUrl);
-        const pokemonsText = await response.text();
+async function getPokemons() {
 
-        const pokemons = JSON.parse(pokemonsText);
-        //console.log(response);
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
+    const fetchedPokemon = await response.json();
+    console.log(fetchedPokemon);
+    displayPokemon(fetchedPokemon)
 
-        populatePokes(pokemons);
+}
+getPokemons();
+const webpage = document.querySelector("body");
+
+
+function displayPokemon(pokemons) {
+    for (poke of pokemons.results) {
+        const pokeCard = document.createElement("div");
+        pokeCard.innerHTML = poke.name;
+    
+
+       
+       pokeCard.url = poke.url;
+       console.log(pokeCard.url)
+       
+       document.querySelector("body").appendChild(pokeCard);
+       
+       pokeCard.addEventListener("click", getPokemon)
     }
 
-    // method to write out pokemons to the page
-        function populatePokes(obj){
-            const body = document.querySelector("body");
-            
-            const pokes = obj.members; 
+}
 
-            // loop to display 10 pokemon names and their urls on page
-            for(const poke in pokes){
-                // console.log(poke.name)
-                const myArticle = document.createElement("article");
-                myArticle.innerHTML =
-                <h2>${poke.name}</h2>,
-                <p>URL: ${poke.url}</p>
-                ;
-               
-                body.appendChild(myArticle);
-            }
-            
-        }
+async function getPokemon(e){
+    const response = await fetch(e.target.url);
+    const fetchedPokemon = await response.json();
+    displayOnePoke(fetchedPokemon);
+}
+ function displayOnePoke(show){
+    //create, edit append
+    const poke1 = document.createElement("div");
+    poke1.innerHTML =`` ;
+
+    const pokeName = document.createElement("h2");
+    poke1.appendChild(pokeName);
+ }
 
 
-   
-    pokeData();
-
-
-document.getElementById("btn").addEventListener("click", function PokeYay(){
-
-})

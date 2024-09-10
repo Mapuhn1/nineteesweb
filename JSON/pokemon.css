@@ -1,0 +1,77 @@
+/* System Fonts as used by GitHub */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin : 0;
+    /* background-color: blue; */
+}
+div{
+    border:1px solid red;
+    margin : 1em; 
+    padding: 0.8em;
+    /* to set te width of the box thing */
+    max-width : 500px;
+  
+    /* text-align: center;  */
+
+  }
+header{
+    font-weight: lighter;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // method to write out pokemons to the page
+function populatePokes(obj) {
+    const body = document.querySelector("body");
+
+    const pokes = obj.members;
+
+    // loop to display 10 pokemon names and their urls on page
+    for (const poke in pokes) {
+        // console.log(poke.name)
+        const myArticle = document.createElement("article");
+        myArticle.innerHTML =
+            <h2>${poke.name}</h2>,
+            <p>URL: ${poke.url}</p>
+            ;
+
+        body.appendChild(myArticle);
+    }
+
+}
+ */
