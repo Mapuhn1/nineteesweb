@@ -1,3 +1,4 @@
+const pokeCard = document.querySelector("body");
 
 async function getPokemons() {
 
@@ -29,17 +30,27 @@ function displayPokemon(pokemons) {
 }
 
 async function getPokemon(e){
-    const response = await fetch(e.target.url);
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10/sprites");
     const fetchedPokemon = await response.json();
+    pokeCard.innerHTML= ``;
     displayOnePoke(fetchedPokemon);
 }
- function displayOnePoke(show){
+ function displayOnePoke(pokes){
     //create, edit append
-    const poke1 = document.createElement("div");
-    poke1.innerHTML =`` ;
+    for (poke of pokes.results){
+        const poke1 = document.createElement("div");
+        poke1.innerHTML =`
+        <h2>${poke.name}</h2>
+        <img src =${poke.sprite}</img>
+        <p> ${poke.url}</p>
+        ` ;
+        //const pokeCard = document.querySelector("body");
+        pokeCard.appendChild(poke1);
 
-    const pokeName = document.createElement("h2");
-    poke1.appendChild(pokeName);
+        const pokeName = document.createElement("h2");
+        poke1.appendChild(pokeName);
+    }
+
  }
 
 
