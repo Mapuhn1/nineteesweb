@@ -1,0 +1,32 @@
+body{
+    dsiplay : flex;
+    flex-wrap: wrap;
+}
+#footer{
+
+    margin : left;
+    color: pink;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#sortData{
+    background-color: rgba(209, 206, 206, 0.945);
+    color : rgb(61, 60, 133);
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+.cardDisplay{
+    border-color: aqua;
+    margin: 1em;
+    padding: 1em;
+    font-weight: lighter;
+    border : 1px solid grey;
+    max-width : 400px;
+    
+}
